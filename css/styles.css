@@ -20,7 +20,7 @@
 а стайл это стн размер ====*/
 /*=================HEADER============*/
 .header-adress {
-  font-family: Roboto;
+  font-family: "Roboto";
   font-weight: 500;
   font-size: 14px;
   line-height: 1, 142;
@@ -41,7 +41,7 @@
 /*чтобі все картинки сделали блочными без зазора в 4px*/
 
 .titel-style {
-  font-family: Raleway;
+  font-family: "Raleway";
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
@@ -55,7 +55,7 @@
   padding-left: 215px;
 }
 .titel-style-color {
-  font-family: Raleway;
+  font-family: "Raleway";
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
@@ -73,7 +73,7 @@
 .navigation-list-link,
 .header-tel-link,
 .header-mail-link {
-  font-family: Roboto;
+  font-family: "Roboto";
   font-weight: 500;
   font-size: 14px;
   line-height: 1, 142;
@@ -96,7 +96,7 @@
 }
 /* настройки кнопки*/
 .modal-button {
-  font-family: Roboto;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -138,7 +138,7 @@
 /*позаголовки блока №2*/
 /*text-transform: uppercase; --это когда все буквы надо сделать заглавными*/
 .subtitel {
-  font-family: Roboto;
+  font-family: "Roboto";
   font-weight: bold;
   font-size: 14px;
   line-height: 1, 142;
@@ -149,7 +149,7 @@
 }
 /*описание блоков №2*/
 .description {
-  font-family: Roboto;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -195,7 +195,7 @@
 }
 
 .hero-titel {
-  font-family: Roboto;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 900;
   font-size: 44px;
@@ -214,7 +214,7 @@
   color: #ffffff;
 }
 .subtitle-description {
-  font-family: Roboto;
+  font-family: "Roboto";
   font-weight: bold;
   font-size: 36px;
   line-height: 1, 166;
@@ -461,7 +461,7 @@
 }
 
 .about-person-name {
-  font-family: Roboto;
+  font-family: "Roboto";
   font-weight: 500;
   font-size: 16px;
   line-height: 1, 187;
@@ -472,7 +472,7 @@
   color: #212121;
 }
 .about-profession {
-  font-family: Roboto;
+  font-family: "Roboto";
   font-weight: normal;
   font-size: 16px;
   line-height: 1, 187;
@@ -484,7 +484,7 @@
 }
 
 .contact-list-link {
-  font-family: Roboto;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -500,7 +500,7 @@
 /*==================FOOTER================*/
 
 .welcam {
-  font-family: Roboto;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -604,7 +604,7 @@
 }
 
 .modal-button-item {
-  font-family: Roboto;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -640,6 +640,7 @@
 }
 
 .content-portfolio-name {
+  font-family: "Roboto";
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
@@ -650,6 +651,7 @@
   color: #212121;
 }
 .gallery-discription {
+  font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -684,62 +686,3 @@
 .gallery-discription {
   display: flex;
 }
-/* нужно высчитывать из ширины и высоты толщину  -borger, и -padding
- например если высота и ширина по 250 а рамка 10 и паддинг 10, то изначально надо прописать все по 210
- . Если ввести box-siting: border-box - то рамка и паддинг не будут влиять на размеры рамки, а будут брать внутреннюю часть контента для себя*/
-/*расстояние межбу секциями это padding их ставиться 2 вверхний и нижний padding-top и padding-botton 
-и в тоже время падинги это внутренние отступы когда нужно толкнуть контент внутри эллемента*/
-/*расстояние между секциями где границу не видно т.к. нет фона считает из расцета расстояния между крайними эллементами и делится на 2
-(например на стр1 между "описаниями" и  "чем мы занимаемся" расстояние 94, значит падигни по 47.
- А вот между блоками самого описания(внимание к деталям, пунктуальность и т.п.) будет margin
-  и "чем мы занимаемся" -между фото и в верхнем блоке "студика, портфолио, контакты" - тоже margin.
-   margin-botton от заголовка "чем мы занимаемся" и аналогичных, до фоток в низ */
-/*margin нужен чтобы соседние эллементы расталкивать между собой/ 
-если не прописать margin то не будут видны разрывы между соседними эллементами когда задастся задний фон. 
-Можно дать только одному эллементу марджин, суммировать не обязательно*/
-/*у крайних эллементов мы margin убирает "контакты портфолиб, логотип и тп"*/
-/* list-item:not(:last-child) {} -- применить ко всем, кроме к последней, например можно прим.к марждинам.
-в примере применял к тегам одного уровня списка <li>*/
-/*ul.gallery>li.gallery-item*9 --через точку уже в быстром создавании прописываем классы*/
-/*margin-left: auto;
-  margin-left: auto; он крепил в div внутри которого был список с фотками*/
-/*front-size: 0; -вещается на родителя, чтобы сбросить отступы которые стоят по умолчанию между фото
-а к li он применяет обнуления крайних  margin, что крайние фото не переносились 
-.gallery-item:not(:nth-child(3n){
-  margin-right: 30px
-}   ЭТО ВСЕ БЫЛО ПРИ ИССП БЛОЧНО-СТРОЧНОЙ СИСТЕМЫ*/
-
-/*FLAXBOX*/
-/*displey: flex; -- горизонтально
-displey: column -- вертикально
-добавить reverse -в обр порядке
-justify-content: center --выравнивание по главной оси
-align-items: center;-- относительно листа по поперечной оси
-flex-wrap:nowrap; --разрешение или запрещение переноса
-order:1 -порядок расположения эллемента*/
-
-/*.social-link {
-  backgraund-image: url ("../img/")
-  
-}
-<a href="#" class="social-list_item-link">
-<svg with="44px" height="44px" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-<title>facebook</title>
-<path d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"></path>
-</svg>
-
-.social-list_item-link svg {
-fill: AFB1B8
-
-
-.social-list_item-link:hover{
-backround-color: blue
-
-}
-.social-list_item-link svg:hover svg{
-fill: white
-
-}
-
-
-*/
