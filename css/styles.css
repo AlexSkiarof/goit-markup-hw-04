@@ -1,0 +1,745 @@
+:root {
+  --accent-color: #2196f3;
+}
+/* обнуляем заданные браузером отступы*/
+*,
+*:: before, 
+*:: after {
+  margin: 0;
+  padding: 0;
+}
+.img {
+  display: block;
+}
+.body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+/*====его дети и предки будут наследовать этот шрифт,
+а стайл это стн размер ====*/
+/*=================HEADER============*/
+.header-adress {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1, 142;
+  letter-spacing: 0.02em;
+}
+
+.ul,
+.li,
+.list {
+  list-style: none;
+}
+
+/*сброс подчеркивания ссылок*/
+
+.link {
+  text-decoration: none;
+}
+/*чтобі все картинки сделали блочными без зазора в 4px*/
+
+.titel-style {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+
+  color: #000000;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  margin: auto;
+  padding-left: 215px;
+}
+.titel-style-color {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+
+  color: #2196f3;
+}
+/*сброс для адресса,т.к. в браузере он по умолчанию стоит италк-с наклоном*/
+.adress {
+  font-style: normal;
+}
+/*настройка верхнего блока навигации*/
+/*стиль телефона вверхней панели*/
+.navigation-list-link,
+.header-tel-link,
+.header-mail-link {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1, 142;
+  letter-spacing: 0.02em;
+
+  color: #000000;
+}
+
+/*===================================BODY=======================*/
+
+.hero .container {
+  /*делаем затемнение с помощью градиента   */
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../img/hero/bg.jpg");
+  width: 1600px;
+  height: 600px;
+}
+/* настройки кнопки*/
+.modal-button {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1, 875;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  /*из-за разности отображения шрифтов, падинги лучше делать чуть меньше если как на макете в одну строчку не влазит*/
+  width: 200px;
+  min-height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 28px;
+  padding-right: 28px;
+
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin: auto;
+}
+/*ставим ховер чтобы выделялся при наведении, и форкус если эллемент интерактивный,
+ а ниже цвет который должен преобретать*/
+.navigation-list-link:hover,
+.navigation-list-link:focus,
+.navigation-list-link:active,
+.header-tel-link:hover,
+.header-tel-link:focus,
+.header-mail-link:hover,
+.header-mail-link:focus {
+  color: #2196f3;
+}
+.active {
+  color: var(--accent-color);
+}
+
+/*позаголовки блока №2*/
+/*text-transform: uppercase; --это когда все буквы надо сделать заглавными*/
+.subtitel {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1, 142;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #212121;
+}
+/*описание блоков №2*/
+.description {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+
+.header-mail-link::before {
+  display: inline-block;
+  content: "";
+  width: 16px;
+  height: 12px;
+  background-color: #ffffff;
+  background-image: url(/img/bacgroung_img/envelope.svg);
+  color: #757575;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  padding-left: 20px;
+  background-repeat: no-repeat;
+}
+
+.header-tel-link::before {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 16px;
+  background-color: #ffffff;
+  background-image: url(/img/bacgroung_img/Vector.svg);
+  color: #757575;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 10px;
+  background-repeat: no-repeat;
+}
+
+.social-mail-svg {
+  height: 16px;
+  width: 12px;
+}
+
+.hero-titel {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1, 364;
+  margin: 0 auto;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  padding-left: 274px;
+  padding-right: 274px;
+  padding-top: 200px; /*если прийдется вынять хэдер из контента поставить 279px*/
+  padding-bottom: 30px;
+
+  color: #ffffff;
+}
+.subtitle-description {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1, 166;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+}
+.container {
+  width: 1200;
+  padding: 0 15px;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+/*dicplay: flex - надо здать каждому эллементу как блоку так и его подразделам*/
+.header .container {
+  width: 1200px;
+  padding: 0 15px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-list {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.header-adress {
+  display: flex;
+}
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.navigation .logo {
+  margin-right: 93px;
+}
+/*последним лишкам мы марджины обнуляем*/
+.navigation-list-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header .adress {
+  margin-left: auto;
+  margin-right: 10px;
+  margin-top: -55px;
+}
+
+.description-block .container {
+  display: flex;
+}
+
+.subtitel-description-list {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  height: 101px;
+  margin-bottom: 94px;
+  margin-top: 94px;
+}
+.subtitel-description-content:not(last-child) {
+  margin-right: 30px;
+}
+
+.subtitel {
+  /*display: flex;*/
+  margin-bottom: 10px;
+  margin-top: 94px;
+}
+
+/*=====================ABOUT US=======================*/
+
+.subtitel_svg1::before {
+  display: block;
+  content: "";
+  width: 270px;
+  height: 120px;
+  margin: 0 auto;
+  background-color: white;
+  background-image: url(/img/bacgroung_img/antenna\ 1.svg),
+    linear-gradient(#f5f4fa, #f5f4fa);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.subtitel_svg2::before {
+  display: block;
+  content: "";
+  width: 270px;
+  height: 120px;
+  margin: 0 auto;
+  background-color: white;
+  background-image: url(/img/bacgroung_img/astronaut\ 1.svg),
+    linear-gradient(#f5f4fa, #f5f4fa);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.subtitel_svg3::before {
+  display: block;
+  content: "";
+  width: 270px;
+  height: 120px;
+  margin: 0 auto;
+  background-color: white;
+  background-image: url(/img/bacgroung_img/clock\ 1.svg),
+    linear-gradient(#f5f4fa, #f5f4fa);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.subtitel_svg4::before {
+  display: block;
+  content: "";
+  width: 270px;
+  height: 120px;
+  margin: 0 auto;
+  background-color: white;
+  background-image: url(/img/bacgroung_img/diagram\ 1.svg),
+    linear-gradient(#f5f4fa, #f5f4fa);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery .container {
+  display: flex;
+}
+
+.gallery-list {
+  display: flex;
+}
+
+.gallery-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+.subtitel-description {
+  margin-bottom: 50px;
+}
+.subtitle-description {
+  margin-top: 94px;
+}
+/*====================ABOUT COMMAND==================*/
+.command .container {
+  display: flex;
+  background-color: #f5f4fa;
+}
+.regular-customers .container {
+  display: flex;
+  background-color: #f5f4fa;
+}
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+.regular-customers-list {
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.social-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.regular-customers-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  background-color: #ffffff;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.social-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.regular-customers-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.social-list-link:hover .social-list-svg {
+  fill: #ffffff;
+}
+.regular-customers-list-link:hover .regular-customers-list-svg {
+  fill: #ffffff;
+}
+
+.social-list-link:hover {
+  background-color: #2196f3;
+}
+
+.regular-customers-list-link:hover {
+  background-color: #2196f3;
+}
+
+.social-list-svg {
+  width: 20px;
+  height: 20px;
+}
+
+.regular-customers-list-svg {
+  width: 170px;
+  height: 60px;
+}
+
+.about-list {
+  display: flex;
+  margin-bottom: 94px;
+}
+
+.about-person-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about-person-content {
+  padding-top: 30px;
+  padding-bottom: 29px;
+  padding-right: 30px;
+  padding-left: 32px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.about-person-name {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1, 187;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+
+  color: #212121;
+}
+.about-profession {
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1, 187;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 16px;
+
+  color: #757575;
+}
+
+.contact-list-link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1, 714;
+  letter-spacing: 0.03em;
+
+  color: rgba(0, 0, 0, 0.6);
+}
+.link-color {
+  color: #ffffff;
+}
+
+/*==================FOOTER================*/
+
+.welcam {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1, 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  display: flex;
+}
+
+.footer .container {
+  display: flex;
+  margin-left: 516px;
+  margin-top: -130px;
+}
+
+.social-list-footer {
+  display: flex;
+  padding: 0;
+}
+
+.footer {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  /*width: 1600px;*/
+  height: 262px;
+  background: #2f303a;
+  margin-left: -100px;
+}
+
+.footer-portfolio {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-left: 50px;
+  width: 1170px;
+  padding: 0 15px;
+}
+.footer .container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.footer .logo {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+.contact-list-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.header-adress-footer {
+  padding-left: 215px;
+  margin: 0 auto;
+}
+
+/*==================PORTFOLIO==========================================*/
+
+.hero-portfolio {
+  margin-top: 94px;
+}
+.modal-button-list {
+  margin-bottom: 50px;
+}
+.gallery-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery-portfolio-list {
+  display: flex;
+}
+
+.modal-button-list {
+  font-size: 0;
+}
+
+.gallery-portfolio-item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+.gallery-portfolio .container {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  /*height: 101px;*/
+  margin-bottom: 94px;
+  margin-top: 94px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.content-portfolio-name {
+  margin-bottom: 4px;
+  margin-top: 20px;
+}
+
+.gallery-discription {
+  margin-bottom: 20px;
+}
+
+.modal-button-item {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1, 165;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  display: inline-block;
+
+  height: 38px;
+
+  background: #f5f4fa;
+  border-radius: 4px;
+  border-color: #ffffff;
+}
+
+.modal-button-list {
+  display: flex;
+}
+
+.modal-button-item {
+  margin-right: 8px;
+}
+
+.modal-button-item:hover,
+.modal-button-item:focus {
+  background-color: #2196f3;
+
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+
+  color: #ffffff;
+}
+
+.content-portfolio-name {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  /* identical to box height, or 200% */
+
+  letter-spacing: 0.06em;
+
+  color: #212121;
+}
+.gallery-discription {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1, 875;
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+
+.portfolio-list-content {
+  padding-top: 20px;
+  padding-bottom: 54px;
+  padding-left: 24px;
+  padding-right: 24px;
+  /*обводки карточек*/
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+
+.gallery-portfolio-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.content-portfolio-name {
+  margin-bottom: 4px;
+}
+
+.gallery {
+  display: flex;
+}
+.gallery-discription {
+  display: flex;
+}
+/* нужно высчитывать из ширины и высоты толщину  -borger, и -padding
+ например если высота и ширина по 250 а рамка 10 и паддинг 10, то изначально надо прописать все по 210
+ . Если ввести box-siting: border-box - то рамка и паддинг не будут влиять на размеры рамки, а будут брать внутреннюю часть контента для себя*/
+/*расстояние межбу секциями это padding их ставиться 2 вверхний и нижний padding-top и padding-botton 
+и в тоже время падинги это внутренние отступы когда нужно толкнуть контент внутри эллемента*/
+/*расстояние между секциями где границу не видно т.к. нет фона считает из расцета расстояния между крайними эллементами и делится на 2
+(например на стр1 между "описаниями" и  "чем мы занимаемся" расстояние 94, значит падигни по 47.
+ А вот между блоками самого описания(внимание к деталям, пунктуальность и т.п.) будет margin
+  и "чем мы занимаемся" -между фото и в верхнем блоке "студика, портфолио, контакты" - тоже margin.
+   margin-botton от заголовка "чем мы занимаемся" и аналогичных, до фоток в низ */
+/*margin нужен чтобы соседние эллементы расталкивать между собой/ 
+если не прописать margin то не будут видны разрывы между соседними эллементами когда задастся задний фон. 
+Можно дать только одному эллементу марджин, суммировать не обязательно*/
+/*у крайних эллементов мы margin убирает "контакты портфолиб, логотип и тп"*/
+/* list-item:not(:last-child) {} -- применить ко всем, кроме к последней, например можно прим.к марждинам.
+в примере применял к тегам одного уровня списка <li>*/
+/*ul.gallery>li.gallery-item*9 --через точку уже в быстром создавании прописываем классы*/
+/*margin-left: auto;
+  margin-left: auto; он крепил в div внутри которого был список с фотками*/
+/*front-size: 0; -вещается на родителя, чтобы сбросить отступы которые стоят по умолчанию между фото
+а к li он применяет обнуления крайних  margin, что крайние фото не переносились 
+.gallery-item:not(:nth-child(3n){
+  margin-right: 30px
+}   ЭТО ВСЕ БЫЛО ПРИ ИССП БЛОЧНО-СТРОЧНОЙ СИСТЕМЫ*/
+
+/*FLAXBOX*/
+/*displey: flex; -- горизонтально
+displey: column -- вертикально
+добавить reverse -в обр порядке
+justify-content: center --выравнивание по главной оси
+align-items: center;-- относительно листа по поперечной оси
+flex-wrap:nowrap; --разрешение или запрещение переноса
+order:1 -порядок расположения эллемента*/
+
+/*.social-link {
+  backgraund-image: url ("../img/")
+  
+}
+<a href="#" class="social-list_item-link">
+<svg with="44px" height="44px" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+<title>facebook</title>
+<path d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"></path>
+</svg>
+
+.social-list_item-link svg {
+fill: AFB1B8
+
+
+.social-list_item-link:hover{
+backround-color: blue
+
+}
+.social-list_item-link svg:hover svg{
+fill: white
+
+}
+
+
+*/
